@@ -10,30 +10,31 @@ def main():
     """
     # Prompt the user to set the savings balance, interest rate, and months for the savings account.
     # ADD YOUR CODE HERE
-    savings_balance = input("user enter balance")
-    savings_interest_rate = input("user enter interest rate")
-    savings_maturity = input("user enter number of months")
+    savings_balance = float(input("Please enter your balance: "))
+    savings_interest_rate = float(input("Please enter an interest rate: "))
+    savings_maturity = float(input("Please enter the number of months: "))
     # Call the create_savings_account function and pass the variables from the user.
     updated_savings_balance, interest_earned = create_savings_account(savings_balance, savings_interest_rate, savings_maturity)
 
     # Print out the interest earned and updated savings account balance with interest earned for the given months.
     # ADD YOUR CODE HERE
-    print(updated_savings_balance + interest_earned + savings_maturity)
-    print(interest_earned)
+    print(round(updated_savings_balance, 2))
+    print(round(interest_earned, 2))
     # Prompt the user to set the CD balance, interest rate, and months for the CD account.
     # ADD YOUR CODE HERE
-    cd_balance =input("user enter cd balance")
-    cd_interest_rate =input("user enter interest rate")
-    cd_maturity =input("user enter number of months")
+    cd_balance = float(input("Please enter your cd balance: "))
+    cd_interest_rate = float(input("Please enter an interest rate: "))
+    cd_maturity = float(input("Please enter the number of months: "))
 
     # Call the create_cd_account function and pass the variables from the user.
     updated_cd_balance, interest_earned = create_cd_account(cd_balance, cd_interest_rate, cd_maturity)
 
     # Print out the interest earned and updated CD account balance with interest earned for the given months.
     # ADD YOUR CODE HERE
-    print(interest_earned)
-    print(updated_cd_balance)
+    print(round(interest_earned, 2))
+    print(round(updated_cd_balance, 2))
 
-    # Call the main function.
-    if __name__ == "__main__":
+# Call the main function.
+if __name__ == "__main__":
+    main()
         
